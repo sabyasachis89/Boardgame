@@ -26,7 +26,7 @@ jobs:
       run: |
         mvn compile
         mvn test
-        echo "App Name: APP_NAME"
+        echo "App Name: $APP_NAME"
         echo "Stage Name: $STAGE_NAME"
         
   build:
@@ -45,8 +45,8 @@ jobs:
     - name: Build with Maven
       run: |
         mvn package
-        echo "App Name: APP_NAME"
-        echo "Stage Name: $STAGE_NAME"
+        echo "App Name: $APP_NAME"
+        
         
     - uses: actions/upload-artifact@v4
       with:
