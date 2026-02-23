@@ -24,7 +24,7 @@ jobs:
         mvn test
         mvn package
   
-    - uses: actions/upload-artifact@4
+    - uses: actions/upload-artifact@v4
       with:
         name: boardgame
         path: target/*jar
