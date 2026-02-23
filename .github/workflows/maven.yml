@@ -23,3 +23,9 @@ jobs:
         mvn compile
         mvn test
         mvn package
+  
+    - uses: echapmanFromBunnings/upload-artifact@3.0
+      with:
+        name: boardgame
+        path: target/*jar
+    
